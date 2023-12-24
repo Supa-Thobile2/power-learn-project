@@ -1,0 +1,40 @@
+.header,.nav-links ul,.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header{
+    height: 17vh;
+}
+.nav-links ul{
+    gap: 8px;
+}
+
+.nav-links ul li{
+    list-style: none;
+}
+
+.main .portfolio-img{
+    width: 400px;
+}
+
+.main .portfolio-img img{
+    width: 100%;
+}
+
+.content{
+    width: 400px;
+}
+
+.education h1{
+    text-align: center;
+}
+
+.high-school{
+    text-align: center;
+}
+
+.skills h1{
+    text-align: center;
+}
+
