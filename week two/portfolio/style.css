@@ -1,40 +1,367 @@
-.header,.nav-links ul,.main{
+/* general styling */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 
+body{
+    background-color: #1a1a1a;
+    color: #dbd7d7;
+} */
+
+/* Header section styling */
+
+.header,.nav-links ul,.about{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header{
     height: 17vh;
 }
+
+.header h1{
+    padding: 20px 10px;
+    margin: 10px 5px;
+    font-size: 50px;
+}
+
+.nav-links{
+    padding: 20px 10px;
+    margin: 10px 5px;
+}
+
 .nav-links ul{
     gap: 8px;
+    padding: 10px;
 }
 
 .nav-links ul li{
+    font-size: 22px;
     list-style: none;
+    margin: 10px;
 }
 
-.main .portfolio-img{
-    width: 400px;
+.mobile-header{
+    display: none;
 }
 
-.main .portfolio-img img{
+/* About section styling */
+
+.about{
+    padding: 50px 30px;
+    margin: 40px 20px;
+   
+}
+
+.about .portfolio-img{
     width: 100%;
+    text-align: center;
+}
+
+.about .portfolio-img img{
+    width: 400px;
 }
 
 .content{
-    width: 400px;
+    width: 100%;
+    margin: 10px 0;
+}
+.content h1{
+    text-align: center;
+    padding: 20px 5px;
+    margin: 10px 0;
+    font-size: 45px;
+    font-weight: 700;
+} 
+
+.content h4{
+    text-align: center;
+    padding: 10px 5px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+} 
+
+.content p{
+    text-align: center;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+} 
+
+.content .btn, .skills .btn{
+    display: flex;
+    padding: 20px;
+
 }
 
-.education h1{
+.content .btn button, .skills .btn button {
+    width: 250px;
+    margin: 10px;
+    outline: 0;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 5%;
+    background-color: #f59119;
+    color: #fff;
+}
+
+/* Resume and skills section styling */
+
+.resume{
+    text-align: center;
+    padding: 50px 30px;
+    margin: 40px 20px;
+    
+   
+}
+
+.resume h1,.skills h1, .contact h1{
+    padding: 40px 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.resume-content, .skills-content{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+  
+}
+
+    .skills-content {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+.skill img, .education img{
+    width: 100%;
+    height: 250px;
+    border-radius: 25px 25px;
+    top: 0
+    
+}
+
+.education,.skill{
+    border: 2px solid #fafafa;
+    background-color: #fffafa;
+    width: 30%;
+    margin: 10px 10px;
+    box-shadow: 4px 2px 3px 0px hsl(0, 0%, 19%, 0.7);
+    border-radius: 25px;
+    
+
+}
+
+
+
+.education h6,.skill h6{
+    font-size: 15px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.education p, .skill p{
+    font-size: 12px;
+    margin: 10px 5px;
+}
+
+.education ul li{
+    list-style: none;
+    font-size: 16px;
+    
+}
+.skills{
+    text-align: center;
+    padding: 50px 30px;
+    margin: 40px 20px; 
+}
+
+/* Contact section styling */
+
+.contact{
+    padding: 50px 30px;
+    margin: 40px 20px; 
+    box-shadow: 8px 0px 5px #303030;
+      
+}
+
+.contact h1{
     text-align: center;
 }
 
-.high-school{
-    text-align: center;
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+    
 }
 
-.skills h1{
-    text-align: center;
+.contact-form form{
+    width: 100%;
+}
+
+.contact-form form input,textarea,button{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.contact-form form button{
+    text-transform: uppercase;
+    border-radius: 5%;
+    outline: none;
+    border: none;
+    background-color: #f59119;
+    color: #fff;
+}
+
+label{
+    padding:10px 0;
+}
+
+/*Media query for mobile screens*/
+
+@media (max-width: 600px) {
+
+    .header{
+        display: none;
+    }
+
+    .mobile-header, .nav-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .mobile-header h1{
+        font-size: 30px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .hamburger{
+
+    }
+  
+    .hamburger-icon{
+        width: 45px;
+        padding: 10px;
+        margin: 10px;
+       
+    }
+
+    .hamburger-icon span{
+        
+        width: 100%;
+        /* border: 1px solid #fff; */
+        background-color: #000;
+        
+        margin: 2px;
+        display: block;
+        padding: 5px;
+    }
+
+    .nav-links ul{
+        background-color: #fff;
+        display: hidden;
+        
+    }
+
+    .nav-links ul li{
+        
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .about {
+        display: block;
+        padding: 10px;
+        margin: 10px 0;
+        
+    }
+
+    .about .portfolio-img {
+        width: 100%;
+    }
+
+    .about .portfolio-img img {
+        width: 100%;
+    }
+
+    .content h1 {
+        
+        font-size: 30px;
+        
+    }
+    
+    .content h4 {
+        font-size: 12px;
+        font-weight: 900;
+    }
+
+    .content p {
+        text-align: left;
+       
+        line-height: 16px;
+        font-size: 14px;
+        
+    }
+
+    .resume {
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .resume h1, .skills h1, .contact h1 {
+        padding: 20px 10px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .resume-content, .skills-content {
+        display: block;
+        
+        flex-wrap: wrap;
+    }
+
+    .education, .skill {
+        
+        width: 100%;
+
+        
+    }
+
+    .skills {
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .contact {
+        
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .contact-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
 }
 
